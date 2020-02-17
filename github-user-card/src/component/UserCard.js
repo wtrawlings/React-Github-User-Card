@@ -23,7 +23,9 @@ function UserCard (props) {
                 <p>...this is my information...</p>
                 <h3>login: {props.dataSet.login} </h3>
                 <p>name: {props.dataSet.name}</p>
-                <img src={props.dataSet.avatar_url} alt={props.dataSet.login}/>
+                <StyledImage src={props.dataSet.avatar_url} alt={props.dataSet.login}/>
+                
+                
             </StyledDiv>
         </div>
     );
