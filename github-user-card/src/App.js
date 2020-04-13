@@ -4,8 +4,12 @@ import './App.css';
 import Axios from "axios";
 import UserCard from "./component/UserCard"
 import FollowerCard from './component/FollowerCard';
-
 import styled from 'styled-components';
+
+//this part was added for the new material-ui styles
+import Card from '@material-ui/core/Card';
+
+
 
 const FollowerDiv = styled.div`
     color: dodgerblue;
@@ -49,9 +53,9 @@ class App extends React.Component {
       <div className="App">
         <h1>MAKE IT LOOK GOOD!!!</h1>
         <h2>from inside the render of class App</h2>
-        <UserCard 
-          dataSet={this.state.dataSet} //this is my data
-          />
+        <Card>
+         <UserCard dataSet={this.state.dataSet} /> {/* this is my data */}
+        </Card>
         <FollowerDiv>
           <p>...here are some of my friends...</p>
         <FollowerCard
