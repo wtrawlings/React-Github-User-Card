@@ -4,8 +4,12 @@ import './App.css';
 import Axios from "axios";
 import UserCard from "./component/UserCard"
 import FollowerCard from './component/FollowerCard';
-
 import styled from 'styled-components';
+
+//this part was added for the new material-ui styles
+import Card from '@material-ui/core/Card';
+
+
 
 const FollowerDiv = styled.div`
     color: dodgerblue;
@@ -40,22 +44,22 @@ class App extends React.Component {
     Axios.get("https://api.github.com/users/wtrawlings/followers")
     .then(response => {
       console.log(response.data);
-      this.setState({ followerDataSet: response.data })
+      this.setState({ followerDataSet: response.data })//set it to state
     });
   }
   
   render() {
     return (
       <div className="App">
-        <h1>GET THIS THING WORKING!!!</h1>
+        <h1>MAKE IT LOOK GOOD!!!</h1>
         <h2>from inside the render of class App</h2>
-        <UserCard 
-          dataSet={this.state.dataSet} 
-          />
+        <Card>
+         <UserCard dataSet={this.state.dataSet} /> {/* this is my data */}
+        </Card>
         <FollowerDiv>
           <p>...here are some of my friends...</p>
         <FollowerCard
-          followerDataSet={this.state.followerDataSet}
+          followerDataSet={this.state.followerDataSet} 
         />
         </FollowerDiv>
       </div>
