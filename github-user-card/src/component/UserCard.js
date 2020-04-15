@@ -9,10 +9,11 @@ const StyledDiv = styled.div`
     margin: 10px;
 `
 const StyledImage = styled.img`
-    border-radius: 50%;
-    outline: 3px solid black;
+    box-shadow: 0 0 5px #ddd;
     width: 30%;
     height: auto;
+    border-radius: 50%;
+    border-style: dotted;
 
 `
 
